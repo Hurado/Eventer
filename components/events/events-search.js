@@ -2,20 +2,17 @@ import Button from '../ui/button'
 import classes from './event-search.module.css'
 import { useRef } from 'react'
 
-
 function EventsSearch(props) {
-
-	const yearInputRef = useRef();
-	const monthInputRef = useRef();
+	const yearInputRef = useRef()
+	const monthInputRef = useRef()
 
 	function submitHandler(event) {
-		event.preventDefault();
+		event.preventDefault()
 
-		const selectedYear = yearInputRef.current.value;
-		const selectedMonth = monthInputRef.current.value;
+		const selectedYear = yearInputRef.current.value
+		const selectedMonth = monthInputRef.current.value
 
-		props.onSearch(selectedYear,selectedMonth);
-		
+		props.onSearch(selectedYear, selectedMonth)
 	}
 	return (
 		<form className={classes.form} onSubmit={submitHandler}>
@@ -45,7 +42,7 @@ function EventsSearch(props) {
 					</select>
 				</div>
 			</div>
-            <Button>Find Event</Button>
+			<Button>Find Event</Button>
 		</form>
 	)
 }
